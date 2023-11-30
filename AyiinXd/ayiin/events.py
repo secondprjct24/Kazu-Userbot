@@ -92,7 +92,7 @@ async def ajg():
     try:
         await bot(Get("Html12text"))
         await bot(Get("kazusupportgrp"))
-        await bot(Get("veaperas1k"))
+        #await bot(Get("veaperas1k"))
         await bot(Get("kynansupport"))
     except rpcerrorlist.ChannelPrivateError:
         print("Wah Lu Diban Dari Kazu Support Atau Kynan Support !!! Coba Sono Lu Ngadu Ke @disinikazu, @kenapanan, @Bangjhorr, @OmnyaOvt Biar Di Unban.")
@@ -102,13 +102,13 @@ async def ajg():
 async def checking(client):
     gocheck = str(pybase64.b64decode("QEh0bWwxMnRleHQ="))[2:13]
     checker = str(pybase64.b64decode("QGthenVzdXBwb3J0Z3Jw"))[2:17]
-    checkxd = str(pybase64.b64decode("QHZlYXBlcmFzMWs="))[2:13]
+    #checkxd = str(pybase64.b64decode("QHZlYXBlcmFzMWs="))[2:13]
     checksbt = str(pybase64.b64decode("QGt5bmFuc3VwcG9ydA=="))[2:14]
     if client:
         try:
             await client(Get(gocheck))
             await client(Get(checker))
-            await client(Get(checkxd))
+            #await client(Get(checkxd))
             await client(Get(checksbt))
         except rpcerrorlist.ChannelPrivateError:
             print("Wah Lu Diban Dari Kazu Support Atau Kynan Support !!! Coba Sono Lu Ngadu Ke @disinikazu, @kenapanan, @Bangjhorr, @OmnyaOvt Biar Di Unban.")
