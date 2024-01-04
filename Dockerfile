@@ -1,17 +1,19 @@
-#==============×==============#
-#      Created by: Alfa-Ex
-#=========× AyiinXd ×=========#
+FROM python:3.10
 
-FROM ayiinxd/ayiin-userbot:buster
+WORKDIR /ubot
+RUN chmod 777 /ubot
 
-RUN git clone -b Kazu-Userbot https://github.com/ionmusic/Kazu-Userbot /home/Kazuuserbot/ \
-    && chmod 777 /home/Kazuuserbot \
-    && mkdir /home/Kazuuserbot/bin/
+# Installing Requirements
+RUN pip3 install -U pip
+COPY requirements.txt .
+RUN pip3 install -U -r req*
 
-COPY ./sample_config.env ./config.env* /home/Kazuuserbot/
+# If u want to use /update feature, uncomment the following and edit
+#RUN git config --global user.email "your_email"
+#RUN git config --global user.name "git_username"
 
-WORKDIR /home/Kazuuserbot/
+# Copying All Source
+COPY . .
 
-RUN pip install -r requirements.txt
-
-CMD ["bash","start"]
+# Starting Bot
+CMD ["bash", "start"]
