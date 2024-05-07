@@ -14,6 +14,7 @@ dnspython
 emoji==1.7.0
 faker
 ffmpeg-python
+python==3.12.1
 fontTools
 geopy
 git+https://github.com/1danish-00/carbon-now-sh-api-wrapper.git
