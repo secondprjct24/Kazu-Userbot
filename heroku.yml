@@ -1,5 +1,5 @@
 build: 
   docker:
-      ayiin: Dockerfile
+      web: Dockerfile
 run:
-   ayiin: python3 -m AyiinXd
+   web: python3 -m AyiinXd
