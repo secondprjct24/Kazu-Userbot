@@ -13,7 +13,7 @@ deezloader
 dnspython
 emoji==1.7.0
 faker
-ffmpeg-python
+ffmpeg-python==0.2.0
 python==3.12.3
 fontTools
 geopy
