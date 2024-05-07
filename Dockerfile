@@ -1,4 +1,4 @@
-FROM ayiin/kazu-userbot:buster
+FROM ayiinxd/ayiin-userbot:buster
 RUN git clone -b Kazu-Userbot https://github.com/ionmusic/Kazu-Userbot /home/Kazuuserbot/ \
     && chmod 777 /home/Kazuuserbot \
     && mkdir /home/Kazuuserbot/bin/
