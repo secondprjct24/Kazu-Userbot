@@ -1,1 +1,1 @@
-worker : python3 -m AyiinXd
+worker : bash start
