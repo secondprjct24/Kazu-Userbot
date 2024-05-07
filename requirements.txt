@@ -50,7 +50,7 @@ pyaztro
 pybase64
 pyfiglet
 PyGithub
-pytgcalls
+pytgcalls==2.0.0
 pylast
 PyPDF2
 pySmartDL
