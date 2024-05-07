@@ -50,7 +50,7 @@ pyaztro
 pybase64
 pyfiglet
 PyGithub
-pytgcalls==2.0.0
+pytgcalls==3.0.0
 pylast
 PyPDF2
 pySmartDL
@@ -82,5 +82,5 @@ wikipedia
 wordcloud
 youtube-dl
 youtube-search
-youtube-search-python
+youtube-search-python==1.4
 zipfile38
