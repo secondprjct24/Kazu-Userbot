@@ -10,7 +10,7 @@ cloudscraper
 covid
 cowpy
 deezloader
-dnspython
+dnspython==2.3.0
 emoji==1.7.0
 faker
 ffmpeg-python==0.1.0
@@ -44,7 +44,7 @@ opencv-python-headless
 openai
 pafy
 pendulum
-pillow==9.5.0
+pillow==8.3.2
 psutil
 pyaztro
 pybase64
