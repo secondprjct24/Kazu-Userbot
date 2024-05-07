@@ -1,4 +1,4 @@
-FROM mrismanaziz/man-userbot:buster:buster
+FROM python:3.10
 RUN git clone -b Kazu-Userbot https://github.com/ionmusic/Kazu-Userbot /home/Kazuuserbot/ \
     && chmod 777 /home/Kazuuserbot \
     && mkdir /home/Kazuuserbot/bin/
