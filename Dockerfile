@@ -1,4 +1,4 @@
-FROM ayiinxd/ayiin:xd
+FROM python:3.9
 RUN git clone -b Kazu-Userbot https://github.com/ionmusic/Kazu-Userbot /home/Kazuuserbot/ \
     && chmod 777 /home/Kazuuserbot \
     && mkdir /home/Kazuuserbot/bin/
@@ -9,7 +9,6 @@ WORKDIR /home/Kazuuserbot/
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
-RUN pip install pyAV
 RUN pip install -r requirements.txt
 
 CMD ["bash","start"]
