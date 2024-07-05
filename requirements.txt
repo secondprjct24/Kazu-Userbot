@@ -52,7 +52,6 @@ pyaztro
 pybase64
 pyfiglet
 PyGithub
-pyAV
 pylast
 pymongo[srv]
 PyPDF2
