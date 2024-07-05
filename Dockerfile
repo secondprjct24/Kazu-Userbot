@@ -9,6 +9,7 @@ WORKDIR /home/Kazuuserbot/
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
+RUN pip install pyAV
 RUN pip install -r requirements.txt
 
 CMD ["bash","start"]
