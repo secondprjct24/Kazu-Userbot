@@ -7,7 +7,7 @@ COPY ./sample_config.env ./config.env* /home/Kazuuserbot/
 
 WORKDIR /home/Kazuuserbot/
 
-RUN pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
 
 RUN pip install -r requirements.txt
