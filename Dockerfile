@@ -10,6 +10,6 @@ WORKDIR /home/Kazuuserbot/
 RUN python -m pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
 
-RUN pip install -r requirements.txt
+RUN pip3 install -U -r requirements.txt
 
 CMD ["bash","start"]
