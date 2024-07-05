@@ -9,7 +9,8 @@ WORKDIR /home/Kazuuserbot/
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade pip setuptools wheel
-RUN pip install pyproject-toml
+RUN pip install av
+RUN pip install av --no-binary av
 RUN pip install -r requirements.txt
 
 CMD ["bash","start"]
