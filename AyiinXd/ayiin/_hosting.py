@@ -26,14 +26,4 @@ def where_hosted():
     return "termux" if os.getenv("ANDROID_ROOT") else "local"
 
 
-HOSTED_ON = where_hosted()
-
-if HOSTED_ON == "local":
-    def _ask_input():
-        # Ask for Input even on Vps and other platforms.
-        def new_input(*args, **kwargs):
-            raise EOFError(f"args={args}, kwargs={kwargs}")
-
-        __builtins__["input"] = new_input
-
-    _ask_input()
+HOSTED_ON = "local"
