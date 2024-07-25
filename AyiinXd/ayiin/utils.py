@@ -92,7 +92,7 @@ async def autopilot():
         heroku_var["BOTLOG_CHATID"] = str(chat.id)
 
 
-async def autobot
+async def autobot():
     if BOT_TOKEN:
         return
     await bot.start()
