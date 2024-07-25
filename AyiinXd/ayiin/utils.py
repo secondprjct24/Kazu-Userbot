@@ -98,7 +98,7 @@ async def autobot():
     await bot.start()
     await asyncio.sleep(15)
     await bot.send_message(
-        BOTLOG_CHATID, "creating assistant bot on @BotFather**"
+        BOTLOG_CHATID, "**creating assistant bot on @BotFather**"
     )
     LOGS.info("TUNGGU SEBENTAR SAYANG. SEDANG MEMBUAT ASSISTANT BOT UNTUK KAMU")
     who = await bot.get_me()
