@@ -49,6 +49,8 @@ pillow
 psutil
 psycopg2-binary
 pyaztro
+py-tgcalls
+pyproject.toml
 pybase64
 pyfiglet
 PyGithub
