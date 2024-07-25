@@ -1,8 +1,8 @@
 {
-  "name": "Kazu-Userbot",
-  "description": "[Kazu-Userbot] Selamat pakai, Luh songong gw Banting",
-  "logo": "https://telegra.ph/file/05c7982e106962b905ef4.jpg",
-  "keywords": ["telegram", "userbot", "Kazu-Userbot", "modular", "python"],
+  "name": "𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot",
+  "description": " from [Kazu-Userbot] ",
+  "logo": "https://telegra.ph/file/f4700c25168954f9b0382.jpg",
+  "keywords": ["telegram", "userbot", "bluefloyd-Userbot", "modular", "python"],
   "repository": "https://github.com/ionmusic/Kazu-Userbot",
   "stack": "container",
   "env": {
