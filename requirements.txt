@@ -48,7 +48,7 @@ pendulum
 pillow
 psutil
 psycopg2-binary
-pytgcalls==3.0.0dev24
+pytgcalls==3.0.0dev26
 pyaztro
 pybase64
 pyfiglet
@@ -76,6 +76,7 @@ speedtest-cli
 sqlalchemy-json
 sqlalchemy==1.3.23
 telegraph
+https://github.com/MarshalX/tgcalls
 https://github.com/New-dev0/Telethon/archive/platy.zip
 telethon-session-sqlalchemy
 telethon-tgcrypto
