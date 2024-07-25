@@ -52,6 +52,7 @@ pyaztro
 pybase64
 pyfiglet
 PyGithub
+pytgcalls==3.0.0dev24
 pylast
 pymongo[srv]
 PyPDF2
