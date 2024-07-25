@@ -59,6 +59,7 @@ PyPDF2
 pySmartDL
 python-barcode
 python-dotenv
+pyproject.toml
 pytz
 Pyyaml
 qrcode
