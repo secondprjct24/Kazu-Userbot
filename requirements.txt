@@ -49,6 +49,7 @@ pendulum
 pillow
 psutil
 psycopg2-binary
+pyproject.toml
 pyaztro
 pybase64
 pyfiglet
