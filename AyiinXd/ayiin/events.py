@@ -106,10 +106,10 @@ async def checking(client):
     #checksbt = str(pybase64.b64decode("QGt5bmFuc3VwcG9ydA=="))[2:14]
     if client:
         try:
-            #await client(Get(gocheck))
-            #await client(Get(checker))
+            await client(Get(gocheck))
+            await client(Get(checker))
             #await client(Get(checkxd))
-            #await client(Get(checksbt))
+            await client(Get(checksbt))
         except rpcerrorlist.ChannelPrivateError:
             print("error, need unbanned!")
             sys.exit(1)
