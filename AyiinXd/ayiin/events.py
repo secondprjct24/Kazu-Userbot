@@ -95,13 +95,13 @@ async def ajg():
         #await bot(Get("veaperas1k"))
         #await bot(Get("kynansupport"))
     except rpcerrorlist.ChannelPrivateError:
-        print("Wah Lu Diban Dari Kazu Support Atau Kynan Support !!! Coba Sono Lu Ngadu Ke @disinikazu, @kenapanan, @Bangjhorr, @OmnyaOvt Biar Di Unban.")
+        print("error, need unbanned!")
         sys.exit(1)
 
 
 async def checking(client):
-    gocheck = str(pybase64.b64decode("QEh0bWwxMnRleHQ="))[2:13]
-    checker = str(pybase64.b64decode("QGthenVzdXBwb3J0Z3Jw"))[2:17]
+    #gocheck = str(pybase64.b64decode("QEh0bWwxMnRleHQ="))[2:13]
+    #checker = str(pybase64.b64decode("QGthenVzdXBwb3J0Z3Jw"))[2:17]
     #checkxd = str(pybase64.b64decode("QHZlYXBlcmFzMWs="))[2:13]
     #checksbt = str(pybase64.b64decode("QGt5bmFuc3VwcG9ydA=="))[2:14]
     if client:
