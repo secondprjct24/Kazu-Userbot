@@ -319,8 +319,8 @@ async def _ds(c, m):
     )
     & filters.me
     & ~filters.forwarded
-
-    async def _dscancel(_, m):
+    
+async def _dscancel(_, m):
     await eor(m, f"cancelled ds{ds} in current chat", time=6)
 
 
