@@ -318,7 +318,7 @@ async def _ds(c, m):
     )
     & filters.me
     & ~filters.forwarded
-
+)
 @ayiin_cmd(pattern="dscancel ([\\s\\S]*)")    
 async def _dscancel(_, m):
     await eor(m, f"cancelled ds{ds} in current chat", time=6)
