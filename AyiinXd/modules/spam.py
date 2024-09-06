@@ -321,8 +321,17 @@ async def _ds(c, m):
 )
 @ayiin_cmd(pattern="dscancel ([\\s\\S]*)")    
 async def _dscancel(_, m):
-    await eor(m, f"cancelled ds{ds} in current chat", time=6)
-
+    """
+    Cancel ds - ds9 in current chat
+    Usage: dscancel, ds1cancel
+    """
+    chat_id = m.chat.id
+    ds = m.command[0].lower()[2:3].replace("c", "")
+    task = get_task(ds)
+    if chat_id not in task:
+        return await eor(m, f"No running •ds{ds}• in current chat.", time=6)
+    task.discard(chat_id)
+    await eor(m, f"`cancelled ds{ds} in current chat`", time=6)
 
 @UserClient.on_message(
     filters.command(
