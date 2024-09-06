@@ -253,6 +253,103 @@ async def dlyspam(event):
     addgvar("spamwork", True)
     await spam_function(event, reply, xnxx, sleeptimem, sleeptimet, DelaySpam=True)
 
+@ayiin_cmd(pattern="fdspam ([\\s\\S]*)")
+async def _ds(c, m):
+    """
+    Start ds, ds1 - ds9
+    Usage: ds [delay] [count] [forward (reply only)] [text/reply]
+    """
+    chat_id = m.chat.id
+    cmd = m.command
+    ds = cmd[0].lower()[2:3]
+    task = get_task(ds)
+    if chat_id in task:
+        return await eor(m, f"Please wait until previous •ds{ds}• is finished or cancel it.", time=6)
+    await m.delete()
+    try:
+        args = cmd[1:]
+        delay, count = int(args[0]), int(args[1])
+    except BaseException:
+        return await eor(m, f"{Var.HANDLER}ds{ds} [delay] [count] [forward (reply only)] [text/reply]", time=6)
+    is_text, is_forward = False, False
+    if m.reply_to_message_id:
+        message = m.reply_to_message
+        message_id = message.id
+        is_forward = "forward" in m.text.lower()
+    else:
+        message = " ".join(m.text.markdown.split(" ")[3:])
+        message_id = 0
+        is_text = True
+    delay = 2 if int(delay) < 2 else delay
+    task.add(chat_id)
+    for _ in range(count):
+        if chat_id not in get_task(ds):
+            break
+        try:
+            await sleep(1)
+            result = await send_message(
+                c,
+                message,
+                chat_id,
+                message_id,
+                delay,
+                is_forward,
+            )
+            if not is_text:
+                message_id = getattr(result, "id", message_id)
+        except RPCError:
+            pass
+        except Exception as err:
+            c.log.error(err)
+            c.log.exception(err)
+            if chat_id not in Var.ERROR_RETRY:
+                Var.ERROR_RETRY.update({chat_id: 1})
+            else:
+                Var.ERROR_RETRY.update({chat_id: Var.ERROR_RETRY[chat_id] + 1})
+            if chat_id in Var.ERROR_RETRY and Var.ERROR_RETRY[chat_id] > 3:
+                Var.ERROR_RETRY.pop(chat_id)
+                break
+    get_task(ds).discard(chat_id)
+
+@ayiin_cmd(pattern="dscancel ([\\s\\S]*)")
+@UserClient.on_message(
+    filters.command(
+        [f"ds{i}cancel" if i != 0 else "dscancel" for i in range(10)],
+        prefixes=Var.HANDLER,
+    )
+    & filters.me
+    & ~filters.forwarded
+
+    async def _dscancel(_, m):
+    await eor(m, f"cancelled ds{ds} in current chat", time=6)
+
+
+@UserClient.on_message(
+    filters.command(
+        [f"ds{i}stop" if i != 0 else "dsstop" for i in range(10)],
+        prefixes=Var.HANDLER,
+    )
+    & filters.me
+    & ~filters.forwarded
+)
+@ayiin_cmd(pattern="dsstop ([\\s\\S]*)")
+async def _dsstop(_, m):
+    """
+    Stop ds - ds9 in all chats
+    usage: dsstop, ds1stop
+    """
+    ds = m.command[0].lower()[2:3].replace("s", "")
+    get_task(ds).clear()
+    await eor(m, f"stopped ds{ds} in all chats", time=0)
+
+
+@UserClient.on_message(
+    filters.command(
+        "dsclear",
+        prefixes=Var.HANDLER,
+    )
+    & filters.me
+    & ~filters.forwarded
 
 CMD_HELP.update(
     {
