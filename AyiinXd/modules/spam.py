@@ -311,7 +311,6 @@ async def _ds(c, m):
                 break
     get_task(ds).discard(chat_id)
 
-@ayiin_cmd(pattern="dscancel ([\\s\\S]*)")
 @UserClient.on_message(
     filters.command(
         [f"ds{i}cancel" if i != 0 else "dscancel" for i in range(10)],
@@ -319,7 +318,8 @@ async def _ds(c, m):
     )
     & filters.me
     & ~filters.forwarded
-    
+
+@ayiin_cmd(pattern="dscancel ([\\s\\S]*)")    
 async def _dscancel(_, m):
     await eor(m, f"cancelled ds{ds} in current chat", time=6)
 
