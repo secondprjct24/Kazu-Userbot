@@ -175,8 +175,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "formalitad")
-CHANNEL = os.environ.get("CHANNEL", "proofniyeee")
+CHANNEL = os.environ.get("CHANNEL", "skyloez")
+CHANNEL = os.environ.get("CHANNEL", "loezsky")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -314,8 +314,8 @@ while 0 < 6:
 
 del _BLACKLIST
 
-ch = str(b64decode("QHByb29mbml5ZWVl"))[2:15]
-gc = str(b64decode("QGZvcm1hbGl0YWQ="))[2:17]
+ch = str(b64decode("QGxvZXpza3k="))[2:15]
+ch = str(b64decode("QHNreWxvZXo="))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
