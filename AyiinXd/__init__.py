@@ -223,7 +223,7 @@ ALIVE_TEKS_CUSTOM = os.environ.get(
     "im alive, what's your command?")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✨")
@@ -366,7 +366,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot v`{BOT_VER}` is back up and running!**\n\n"
+        f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -567,7 +567,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot Menu**\n\n Based on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**"
+                text = f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot Menu**\n\n Based on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**"
                 await event.edit(
                     text,
                     file=logoyins,
@@ -589,7 +589,7 @@ with bot:
                 result = await event.builder.photo(
                     file=logoyins,
                     link_preview=False,
-                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
+                    text=f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
@@ -710,15 +710,15 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗**\n whats wrong???",
+                    text=f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺**\n whats wrong???",
                     buttons=[
                         [
                             custom.Button.url(
-                                "jajan here",
-                                "https://t.me/proofniyeee"),
+                                "support",
+                                "https://t.me/loezsky"),
                             custom.Button.url(
-                                "repo kazu",
-                                "https://github.com/ionmusic/Kazu-Userbot"),
+                                "repack by",
+                                "https://t.me/blque"),
                         ],
                     ],
                     link_preview=False,
