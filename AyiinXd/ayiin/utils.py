@@ -58,8 +58,8 @@ async def autopilot():
     try:
         r = await bot(
             CreateChannelRequest(
-                title="botlogs.-𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗",
-                about="support channel @proofniyeee",
+                title="botlogs.-𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot",
+                about="support channel @loezsky",
                 megagroup=True,
             ),
         )
@@ -106,7 +106,7 @@ async def autobot():
     if who.username:
         username = f"{who.username}_bot"
     else:
-        username = f"Blue{(str(who.id))[5:]}bot"
+        username = f"loez{(str(who.id))[5:]}bot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -145,7 +145,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = f"Blue{str(who.id)[6:]}{ran}bot"
+        username = f"loez{str(who.id)[6:]}{ran}bot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
@@ -174,7 +174,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"made with love"
+                bf, f"made for you from loezsky"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -184,7 +184,7 @@ async def autobot():
                 f"BERHASIL MEMBUAT ASSISTANT BOT KAMU DENGAN USERNAME @{username}")
             await bot.send_message(
                 BOTLOG_CHATID,
-                "**restarting bot. special thanks to @disinikazu for this great repository**",
+                "**restarting bot. support @loezsky**",
             )
             heroku_var["BOT_TOKEN"] = token
             heroku_var["BOT_USERNAME"] = f"@{username}"
@@ -218,7 +218,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"made with love"
+            bf, f"made for you from loezsky"
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -228,7 +228,7 @@ async def autobot():
             f"BERHASIL MEMBUAT ASSISTANT BOT KAMU DENGAN USERNAME @{username}")
         await bot.send_message(
             BOTLOG_CHATID,
-            "**restarting bot. special thanks to @disinikazu for this great repository**",
+            "**restarting bot. support @loezsky**",
         )
         heroku_var["BOT_TOKEN"] = token
         heroku_var["BOT_USERNAME"] = f"@{username}"
