@@ -62,7 +62,7 @@ async def _(ping):
     await Ayiin.edit("⚡")
     sleep(3)
     await Ayiin.edit(
-        f"𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot\n\n"
+        f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot\n\n"
         f"ping : `%sms`\n"
         f"uptime : `{uptime}` \n"
         f"owner : [{user.first_name}](tg://user?id={user.id})" % (duration)
