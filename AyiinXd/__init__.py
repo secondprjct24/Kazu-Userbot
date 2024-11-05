@@ -28,7 +28,7 @@ from git import Repo
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from requests import get
-from telethon import Button, __version__ as vsc
+from telethon import Button, version as vsc
 from telethon.errors import UserIsBlockedError
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
@@ -74,7 +74,7 @@ logging.getLogger("asyncio").setLevel(logging.ERROR)
 logging.getLogger("pytgcalls").setLevel(logging.ERROR)
 logging.getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
 logging.getLogger("telethon.network.connection.connection").setLevel(logging.ERROR)
-LOGS = getLogger(__name__)
+LOGS = getLogger(name)
 
 if version_info[0] < 3 or version_info[1] < 8:
     LOGS.info(
@@ -84,7 +84,7 @@ if version_info[0] < 3 or version_info[1] < 8:
     sys.exit(1)
 
 if CONFIG_CHECK := os.environ.get(
-    "___________PLOX_______REMOVE_____THIS_____LINE__________", None
+    "_________PLOX___REMOVE_THIS_LINE________", None
 ):
     LOGS.info(
         "Harap hapus baris yang disebutkan dalam tagar pertama dari file config.env"
@@ -175,8 +175,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "formalitad")
-CHANNEL = os.environ.get("CHANNEL", "proofniyeee")
+CHANNEL = os.environ.get("CHANNEL", "skyloez")
+CHANNEL = os.environ.get("GROUP", "loezsky")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -223,7 +223,7 @@ ALIVE_TEKS_CUSTOM = os.environ.get(
     "im alive, what's your command?")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✨")
@@ -252,17 +252,17 @@ BOT_VER = os.environ.get("BOT_VER", "3.6.9")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
+              or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
+              or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
             or ".png")
 
 QUEUE_PIC = (os.environ.get("QUEUE_PIC")
-             or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
+             or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
 
 DEFAULT = list(map(int, b64decode("NTA2MzA2MjQ5Mw==").split()))
 
@@ -314,8 +314,8 @@ while 0 < 6:
 
 del _BLACKLIST
 
-ch = str(b64decode("QHByb29mbml5ZWVl"))[2:15]
-gc = str(b64decode("QGZvcm1hbGl0YWQ="))[2:17]
+ch = str(b64decode("QGxvZXpza3k="))[2:15]
+gc = str(b64decode("QHNreWxvZXo="))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
@@ -366,9 +366,9 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot v`{BOT_VER}` is back up and running!**\n\n"
-        f"**Telethon:** `{vsc}`\n"
-        f"**Python:** `{python_version()}`\n"
+        f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot v{BOT_VER} is back up and running!\n\n"
+        f"Telethon: {vsc}\n"
+        f"Python: {python_version()}\n"
     )
     await bot.edit_message(chat_id, msg_id, message)
     return True
@@ -463,8 +463,8 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg",
-                    "https://telegra.ph/file/753f82bb7a150f14f92cf.jpg",
+                    "https://telegra.ph/file/00b635e340db8b85be11b.jpg",
+                    "https://telegra.ph/file/00b635e340db8b85be11b.jpg",
                 ]
         )
         cmd = CMD_HANDLER
@@ -505,7 +505,7 @@ with bot:
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            f"**ERROR:** Saat menyimpan detail pesan di database\n`{str(e)}`",
+                            f"ERROR: Saat menyimpan detail pesan di database\n{str(e)}",
                         )
             else:
                 if event.text.startswith("/"):
@@ -539,10 +539,10 @@ with bot:
                             )
                     except UserIsBlockedError:
                         return await event.reply(
-                            "❌ **Bot ini diblokir oleh pengguna.**"
+                            "❌ Bot ini diblokir oleh pengguna."
                         )
                     except Exception as e:
-                        return await event.reply(f"**ERROR:** `{e}`")
+                        return await event.reply(f"ERROR: {e}")
                     try:
                         add_user_to_db(
                             reply_to,
@@ -556,7 +556,7 @@ with bot:
                         if BOTLOG:
                             await event.client.send_message(
                                 BOTLOG_CHATID,
-                                f"**ERROR:** Saat menyimpan detail pesan di database\n`{e}`",
+                                f"ERROR: Saat menyimpan detail pesan di database\n{e}",
                             )
 
         @tgbot.on(
@@ -567,7 +567,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot Menu**\n\n Based on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**"
+                text = f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot Menu\n\n Based on : {adB.name}\n Deploy on : •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah : {len(dugmeler)} Modules**"
                 await event.edit(
                     text,
                     file=logoyins,
@@ -589,20 +589,20 @@ with bot:
                 result = await event.builder.photo(
                     file=logoyins,
                     link_preview=False,
-                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
+                    text=f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot\n\n Bases on : {adB.name}\n Deploy on : •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah : {len(dugmeler)} Modules",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository 𝙺𝙰𝚉𝚄-𝚄𝚂𝙴𝚁𝙱𝙾𝚃",
-                    url="https://t.me/kazusupportgrp",
+                    description="𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot",
+                    url="https://t.me/loezsky",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot\n✧  **ʀᴇᴘᴏ :** [𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃](https://t.me/disinikazu)\n✧ **sᴜᴘᴘᴏʀᴛ :** @kazusupportgrp\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [KazuUBot](https://github.com/ionmusic/Kazu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot\n✧  ʀᴇᴘᴏ : 𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃\n✧ sᴜᴘᴘᴏʀᴛ : @kazusupportgrp\n✧ ʀᴇᴘᴏsɪᴛᴏʀʏ :** KazuUBot\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -710,15 +710,15 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗**\n whats wrong???",
+                    text=f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺\n whats wrong???",
                     buttons=[
                         [
                             custom.Button.url(
-                                "jajan here",
-                                "https://t.me/proofniyeee"),
+                                "support",
+                                "https://t.me/loezsky"),
                             custom.Button.url(
-                                "repo kazu",
-                                "https://github.com/ionmusic/Kazu-Userbot"),
+                                "repack by",
+                                "https://t.me/blque"),
                         ],
                     ],
                     link_preview=False,
@@ -767,7 +767,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @iamuput-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot Menu**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
+                    f"𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot Menu\n\n✧ ᴏᴡɴᴇʀ : [{user.first_name}](tg://user?id={user.id})\n✧ ᴊᴜᴍʟᴀʜ : {len(dugmeler)} Modules")
                 await event.edit(
                     text,
                     file=logoyins,
@@ -832,31 +832,31 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Perintah yang tersedia di vcplugin** ✘
+✘ Perintah yang tersedia di vcplugin ✘
 
-  »  **Perintah : **`{cmd}play` <Judul Lagu/Link YT>
-  »  **Kegunaan :** __Untuk Memutar Lagu di voice chat group dengan akun kamu.__
+  »  Perintah : {cmd}play <Judul Lagu/Link YT>
+  »  Kegunaan : Untuk Memutar Lagu di voice chat group dengan akun kamu.
 
-  »  **Perintah : **`{cmd}vplay` <Judul Video/Link YT>
-  »  **Kegunaan :** __Untuk Memutar Video di voice chat group dengan akun kamu.__
+  »  Perintah : {cmd}vplay <Judul Video/Link YT>
+  »  Kegunaan : Untuk Memutar Video di voice chat group dengan akun kamu.
 
-  »  **Perintah : **`{cmd}end`
-  »  **Kegunaan :** __Untuk Memberhentikan video/lagu yang sedang putar di voice chat group.__
+  »  Perintah : {cmd}end
+  »  Kegunaan : Untuk Memberhentikan video/lagu yang sedang putar di voice chat group.
 
-  »  **Perintah : **`{cmd}skip`
-  »  **Kegunaan :** __Untuk Melewati video/lagu yang sedang di putar.__
+  »  Perintah : {cmd}skip
+  »  Kegunaan : Untuk Melewati video/lagu yang sedang di putar.
 
-  »  **Perintah : **`{cmd}pause`
-  »  **Kegunaan :** __Untuk memberhentikan video/lagu yang sedang diputar.__
+  »  Perintah : {cmd}pause
+  »  Kegunaan : Untuk memberhentikan video/lagu yang sedang diputar.
 
-  »  **Perintah : **`{cmd}resume`
-  »  **Kegunaan :** __Untuk melanjutkan pemutaran video/lagu yang sedang diputar.__
+  »  Perintah : {cmd}resume
+  »  Kegunaan : Untuk melanjutkan pemutaran video/lagu yang sedang diputar.
 
-  »  **Perintah : **`{cmd}volume` 1-200
-  »  **Kegunaan :** __Untuk mengubah volume (Membutuhkan Hak admin).__
+  »  Perintah : {cmd}volume 1-200
+  »  Kegunaan : Untuk mengubah volume (Membutuhkan Hak admin).
 
-  »  **Perintah : **`{cmd}playlist`
-  »  **Kegunaan :** __Untuk menampilkan daftar putar Lagu/Video.__
+  »  Perintah : {cmd}playlist
+  »  Kegunaan : Untuk menampilkan daftar putar Lagu/Video.
 """)
                 await event.edit(
                     text,
@@ -876,25 +876,25 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Perintah yang tersedia di vctools** ✘
+✘ Perintah yang tersedia di vctools ✘
 
-  »  **Perintah : **`{cmd}startvc`
-  »  **Kegunaan :** __Untuk Memulai voice chat group.__
+  »  Perintah : {cmd}startvc
+  »  Kegunaan : Untuk Memulai voice chat group.
+  
+  »  Perintah : {cmd}stopvc
+  »  Kegunaan : Untuk Memberhentikan voice chat group.
 
-  »  **Perintah : **`{cmd}stopvc`
-  »  **Kegunaan :** __Untuk Memberhentikan voice chat group.__
+  »  Perintah : {cmd}joinvc atau {cmd}joinvc <chatid/username gc>
+  »  Kegunaan : Untuk Bergabung ke voice chat group.
 
-  »  **Perintah :** `{cmd}joinvc` atau `{cmd}joinvc` <chatid/username gc>
-  »  **Kegunaan :** __Untuk Bergabung ke voice chat group.__
+  »  Perintah : {cmd}leavevc atau {cmd}leavevc <chatid/username gc>
+  »  Kegunaan : Untuk Turun dari voice chat group.
 
-  »  **Perintah : **`{cmd}leavevc` atau `{cmd}leavevc` <chatid/username gc>
-  »  **Kegunaan :** __Untuk Turun dari voice chat group.__
+  »  Perintah : {cmd}vctitle <title vcg>
+  »  Kegunaan : Untuk Mengubah title/judul voice chat group.
 
-  »  **Perintah : **`{cmd}vctitle` <title vcg>
-  »  **Kegunaan :** __Untuk Mengubah title/judul voice chat group.__
-
-  »  **Perintah : **`{cmd}vcinvite`
-  »  **Kegunaan :** __Mengundang Member group ke voice chat group.__
+  »  Perintah : {cmd}vcinvite
+  »  Kegunaan : Mengundang Member group ke voice chat group.
 """)
                 await event.edit(
                     text,
@@ -934,22 +934,22 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Perintah Yang Tersedia Di btpm** ✘
+✘ Perintah Yang Tersedia Di btpm ✘
 
-  »  **Perintah : **`{cmd}btpm` <username ch>
-  »  **Kegunaan :** __Untuk Mendapatkan List Btpm Kosong.__
+  »  Perintah : {cmd}btpm <username ch>
+  »  Kegunaan : Untuk Mendapatkan List Btpm Kosong.
 
-  »  **Perintah : **`{cmd}savebt` <nama_list>
-  »  **Kegunaan :** __Untuk Menyimpan List Btpm, Gunakan Nama Yang Berbeda.__
+  »  Perintah : {cmd}savebt <nama_list>
+  »  Kegunaan : Untuk Menyimpan List Btpm, Gunakan Nama Yang Berbeda.
 
-  »  **Perintah : **$<nama_list>
-  »  **Kegunaan :** __Untuk Mendapatkan List Btpm Yang Tersimpan.__
+  »  Perintah : $<nama_list>
+  »  Kegunaan : Untuk Mendapatkan List Btpm Yang Tersimpan.
 
-  »  **Perintah : **`{cmd}delbt` <nama_list>
-  »  **Kegunaan :** __Menghapus List Btpm Yang Tersimpan.__
+  »  Perintah : {cmd}delbt <nama_list>
+  »  Kegunaan : Menghapus List Btpm Yang Tersimpan.
 
-  »  **Perintah : **`{cmd}listbt` <nama_list>
-  »  **Kegunaan :** __Untuk Menlihat Semua List Btpm Yang Tersimpan.__
+  »  Perintah : {cmd}listbt <nama_list>
+  »  Kegunaan : Untuk Menlihat Semua List Btpm Yang Tersimpan.
 """)
                 await event.edit(
                     text,
@@ -969,10 +969,10 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Perintah yang tersedia di yins bokep** ✘
+✘ Perintah yang tersedia di yins bokep ✘
 
-  »  **Perintah : **`{cmd}bokp`
-  »  **Kegunaan :** __Untuk Mengirim bokp secara random.__
+»  Perintah : {cmd}bokp
+  »  Kegunaan : Untuk Mengirim bokp secara random.
 """)
                 await event.edit(
                     text,
@@ -992,13 +992,13 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 text = (
                     f"""
-✘ **Perintah yang tersedia di tools** ✘
+✘ Perintah yang tersedia di tools ✘
 
-  »  **Perintah :** `{cmd}lang`
-  »  **Kegunaan : **Untuk Mengubah Bahasa.
+  »  Perintah : {cmd}lang
+  »  Kegunaan : Untuk Mengubah Bahasa.
 
-  »  **Perintah :** `{cmd}string`
-  »  **Kegunaan : **Untuk Membuat String Session.
+  »  Perintah : {cmd}string
+  »  Kegunaan : Untuk Membuat String Session.
 """)
                 await event.edit(
                     text,
@@ -1014,7 +1014,7 @@ with bot:
             buttons = [
                 (custom.Button.inline("ᴍᴀɪɴ ᴍᴇɴᴜ", data="gcback"),),
             ]
-            await event.edit("**ᴍᴇɴᴜ ᴅɪᴛᴜᴛᴜᴘ**", file=logoyins, buttons=buttons)
+            await event.edit("ᴍᴇɴᴜ ᴅɪᴛᴜᴛᴜᴘ", file=logoyins, buttons=buttons)
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
