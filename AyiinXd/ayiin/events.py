@@ -100,8 +100,8 @@ async def ajg():
 
 
 async def checking(client):
-    gocheck = str(pybase64.b64decode("QHByb29mbml5ZWVl"))[2:13]
-    checker = str(pybase64.b64decode("QGZvcm1hbGl0YWQ="))[2:17]
+    gocheck = str(pybase64.b64decode("QGxvZXpza3k="))[2:13]
+    checker = str(pybase64.b64decode("QHNreWxvZXo="))[2:17]
     #checkxd = str(pybase64.b64decode("QHZlYXBlcmFzMWs="))[2:13]
     #checksbt = str(pybase64.b64decode("QGt5bmFuc3VwcG9ydA=="))[2:14]
     if client:
