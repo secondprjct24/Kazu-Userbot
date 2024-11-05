@@ -175,8 +175,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-CHANNEL = os.environ.get("CHANNEL", "skyloez")
-CHANNEL = os.environ.get("GROUP", "loezsky")
+GROUP = os.environ.get("GROUP", "formalitad")
+CHANNEL = os.environ.get("CHANNEL", "proofniyeee")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -223,7 +223,7 @@ ALIVE_TEKS_CUSTOM = os.environ.get(
     "im alive, what's your command?")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✨")
@@ -252,17 +252,17 @@ BOT_VER = os.environ.get("BOT_VER", "3.6.9")
 
 # Default .alive logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
+              or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
 
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
+              or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
             or ".png")
 
 QUEUE_PIC = (os.environ.get("QUEUE_PIC")
-             or "https://telegra.ph/file/00b635e340db8b85be11b.jpg")
+             or "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg")
 
 DEFAULT = list(map(int, b64decode("NTA2MzA2MjQ5Mw==").split()))
 
@@ -314,8 +314,8 @@ while 0 < 6:
 
 del _BLACKLIST
 
-ch = str(b64decode("QGxvZXpza3k="))[2:15]
-gc = str(b64decode("QHNreWxvZXo="))[2:17]
+ch = str(b64decode("QHByb29mbml5ZWVl"))[2:15]
+gc = str(b64decode("QGZvcm1hbGl0YWQ="))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
@@ -366,7 +366,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot v`{BOT_VER}` is back up and running!**\n\n"
+        f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -463,8 +463,8 @@ with bot:
         logo = ALIVE_LOGO
         logoyins = random.choice(
                 [
-                    "https://telegra.ph/file/00b635e340db8b85be11b.jpg",
-                    "https://telegra.ph/file/00b635e340db8b85be11b.jpg",
+                    "https://telegra.ph/file/55d430161fa76fbd0e15b.jpg",
+                    "https://telegra.ph/file/753f82bb7a150f14f92cf.jpg",
                 ]
         )
         cmd = CMD_HANDLER
@@ -567,7 +567,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot Menu**\n\n Based on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**"
+                text = f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot Menu**\n\n Based on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner : {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**"
                 await event.edit(
                     text,
                     file=logoyins,
@@ -589,20 +589,20 @@ with bot:
                 result = await event.builder.photo(
                     file=logoyins,
                     link_preview=False,
-                    text=f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
+                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot**\n\n Bases on :** {adB.name}\n Deploy on :** •[{HOSTED_ON}]•\n Owner :** {user.first_name}\n Jumlah :** {len(dugmeler)} **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot",
-                    url="https://t.me/loezsky",
+                    description="Repository 𝙺𝙰𝚉𝚄-𝚄𝚂𝙴𝚁𝙱𝙾𝚃",
+                    url="https://t.me/kazusupportgrp",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot\n✧  **ʀᴇᴘᴏ :** [𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃](https://t.me/disinikazu)\n✧ **sᴜᴘᴘᴏʀᴛ :** @kazusupportgrp\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [KazuUBot](https://github.com/ionmusic/Kazu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot\n✧  **ʀᴇᴘᴏ :** [𝙺𝙰𝚉𝚄 𝚄𝚂𝙴𝚁𝙱𝙾𝚃](https://t.me/disinikazu)\n✧ **sᴜᴘᴘᴏʀᴛ :** @kazusupportgrp\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [KazuUBot](https://github.com/ionmusic/Kazu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -710,15 +710,15 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺**\n whats wrong???",
+                    text=f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗**\n whats wrong???",
                     buttons=[
                         [
                             custom.Button.url(
-                                "support",
-                                "https://t.me/loezsky"),
+                                "jajan here",
+                                "https://t.me/proofniyeee"),
                             custom.Button.url(
-                                "repack by",
-                                "https://t.me/blque"),
+                                "repo kazu",
+                                "https://github.com/ionmusic/Kazu-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -767,7 +767,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @iamuput-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**𝗟𝘰𝘦𝘻𝘴𝘬𝘺-Userbot Menu**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
+                    f"**𝗕𝗟𝗨𝗘𝗙𝗟𝗢𝗬𝗗-Userbot Menu**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
                 await event.edit(
                     text,
                     file=logoyins,
